@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+,<!DOCTYPE html>
 <html>
 <head>
 <title>My Website</title>
@@ -57,15 +57,25 @@ background:#0056b3;
 </div>
 
 <script>
+if(localStorage.getItem("login")=="yes"){
+document.body.innerHTML="<h1>Welcome back 😎</h1><button onclick='logout()'>Logout</button>";
+}
+
 function login(){
 var u=document.getElementById("user").value;
 var p=document.getElementById("pass").value;
 
 if(u=="admin" && p=="1234"){
-document.getElementById("msg").innerHTML="Login success 😎";
+localStorage.setItem("login","yes");
+location.reload();
 }else{
 document.getElementById("msg").innerHTML="Wrong details ❌";
 }
+}
+
+function logout(){
+localStorage.removeItem("login");
+location.reload();
 }
 </script>
 
