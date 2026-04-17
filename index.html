@@ -1,83 +1,10 @@
-,<!DOCTYPE html>
-<html>
-<head>
-<title>My Website</title>
-<style>
-body{
-background: linear-gradient(to right, #141e30, #243b55);
-font-family: Arial;
-text-align:center;
-color:white;
-}
+<h1>Hi, I'm Nuraddeen 👋</h1>
+<p>I am a Web Developer 💻</p>
 
-.box{
-margin-top:100px;
-background:white;
-color:black;
-padding:20px;
-border-radius:10px;
-width:250px;
-margin-left:auto;
-margin-right:auto;
-}
+<h2>My Projects</h2>
+<ul>
+<li>Login Website 😎</li>
+</ul>
 
-input{
-width:90%;
-padding:10px;
-margin:10px;
-border-radius:5px;
-border:none;
-}
-
-button{
-padding:10px 20px;
-background:#007bff;
-color:white;
-border:none;
-border-radius:5px;
-}
-
-button:hover{
-background:#0056b3;
-}
-</style>
-</head>
-
-<body>
-
-<h1>My Website 😎</h1>
-
-<div class="box">
-<input id="user" placeholder="Username"><br>
-<input id="pass" placeholder="Password"><br>
-
-<button onclick="login()">Login</button>
-
-<p id="msg"></p>
-</div>
-
-<script>
-if(localStorage.getItem("login")=="yes"){
-document.body.innerHTML="<h1>Welcome back 😎</h1><button onclick='logout()'>Logout</button>";
-}
-
-function login(){
-var u=document.getElementById("user").value;
-var p=document.getElementById("pass").value;
-
-if(u=="admin" && p=="1234"){
-localStorage.setItem("login","yes");
-location.reload();
-}else{
-document.getElementById("msg").innerHTML="Wrong details ❌";
-}
-}
-
-function logout(){
-localStorage.removeItem("login");
-location.reload();
-}
-</script>
-
-</body>
-</html>
+<h2>Contact Me</h2>
+<a href="https://wa.me/234XXXXXXXXXX">Chat me on WhatsApp</a>
